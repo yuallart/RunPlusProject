@@ -9,7 +9,6 @@
  */
 #pragma once
 #include <nlohmann/json.hpp>
-
 #include "EncodingForm.h"
 
 class JsonMethods : public EncodingForm

@@ -1,28 +1,24 @@
-#pragma once
+ï»¿#pragma once
 #include <qdir.h>
 #include <QDebug>
-#include <QJsonObject>
+#include <nlohmann/json.hpp>
 
 /**
- * \brief ÎÄ¼ş´¦ÀíÀà
+ * \brief æ–‡ä»¶å¤„ç†ç±»
  */
 class GetFileMethods
 {
 private:
-    /**
-     * \brief ÓÃÓÚ±£´æ»ñÈ¡µ½µÄÎÄ¼şÁĞ±íĞÅÏ¢
-     */
-    QFileInfoList globalFileList;
 public:
     /**
-     * \brief ´Ëº¯ÊıÓÃÓÚ»ñÈ¡Ö¸¶¨ÎÄ¼şÂ·¾¶ÏÂµÄËùÓĞÎÄ¼ş£¬Ö»¼ìË÷ÎÄ¼ş
-     * \param filePath ½ÓÊÕÒ»¸öÄ¿Â¼µØÖ·×Ö·û´®
-     * \param fileList ½ÓÊÕÒ»¸ölistµØÖ·
-     * \return ·µ»ØÎÄ¼şÁĞ±íµÄ³¤¶È
+     * \brief æ­¤å‡½æ•°ç”¨äºè·å–æŒ‡å®šæ–‡ä»¶è·¯å¾„ä¸‹çš„æ‰€æœ‰æ–‡ä»¶ï¼Œåªæ£€ç´¢æ–‡ä»¶
+     * \param filePath æ¥æ”¶ä¸€ä¸ªç›®å½•åœ°å€å­—ç¬¦ä¸²
+     * \param fileList æ¥æ”¶ä¸€ä¸ªliståœ°å€
+     * \return è¿”å›æ–‡ä»¶åˆ—è¡¨çš„é•¿åº¦
      */
     int GetFileInfo(const char* filePath, QFileInfoList* fileList)
     {
-        //QDirµÄÂ·¾¶Ò»¶¨ÒªÊÇÈ«Â·¾¶£¬Ïà¶ÔÂ·¾¶»áÓĞ´íÎó
+        //QDirçš„è·¯å¾„ä¸€å®šè¦æ˜¯å…¨è·¯å¾„ï¼Œç›¸å¯¹è·¯å¾„ä¼šæœ‰é”™è¯¯
         QDir dir(QString::fromLocal8Bit(filePath));
         if (!dir.exists())
         {
@@ -30,22 +26,24 @@ public:
         }
         dir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
         dir.setSorting(QDir::DirsFirst);
-        //Ö¸ÏòÒ»¸ölist
+        //æŒ‡å‘ä¸€ä¸ªlist
         *fileList = dir.entryInfoList();
-        globalFileList = dir.entryInfoList();
         return fileList->length();
     }
+
     /**
-     * @brief ½«»ñÈ¡µ½µÄÎÄ¼şĞÅÏ¢×ª»¯ÎªÁĞ±í
-     * @return ·µ»ØÒ»¸öJSON¶ÔÏó
+     * @brief å°†è·å–åˆ°çš„æ–‡ä»¶ä¿¡æ¯è½¬åŒ–ä¸ºåˆ—è¡¨
+     * @return è¿”å›ä¸€ä¸ªJSONå¯¹è±¡
      */
-    QJsonObject toJsonList()
+    nlohmann::json toJsonList(QFileInfoList fileList)
     {
-        QJsonObject json;
-        foreach(QFileInfo fileInfo, globalFileList)
+        std::map<std::string, std::string> fileInfo;
+        for (QFileInfoList::iterator iterator = fileList.begin(); iterator != fileList.end(); ++iterator)
         {
-            json.insert(fileInfo.fileName(), fileInfo.filePath());
+            std::string fileName = iterator.i->t().fileName().toStdString();
+            std::string filePath = iterator.i->t().filePath().toStdString();
+            fileInfo.insert(std::make_pair(fileName, filePath));
         }
-        return json;
+        return nlohmann::json(fileInfo);
     }
 };

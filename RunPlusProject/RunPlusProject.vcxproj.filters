@@ -36,6 +36,12 @@
     <Filter Include="Source Files\test">
       <UniqueIdentifier>{0ab6e8b3-07cd-4149-8511-aef14aa9398c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\system\file">
+      <UniqueIdentifier>{1eebabbc-b179-40fb-8f79-5d086040849a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\system\string">
+      <UniqueIdentifier>{e2ea7544-72c7-4dd6-8a71-7c6f7735c808}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="MainWidgets.qrc">
@@ -58,22 +64,22 @@
     <ClCompile Include="SelectDialog.h">
       <Filter>Header Files\dialog</Filter>
     </ClCompile>
-    <ClCompile Include="GetFileMethods.h">
-      <Filter>Header Files\system</Filter>
-    </ClCompile>
     <ClCompile Include="MainWidgets.cpp">
       <Filter>Source Files\widget</Filter>
+    </ClCompile>
+    <ClCompile Include="GetFileMethods.h">
+      <Filter>Header Files\system\file</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="JsonMethods.h">
-      <Filter>Header Files\system</Filter>
-    </ClInclude>
     <ClInclude Include="EncodingForm.h">
-      <Filter>Header Files\system</Filter>
+      <Filter>Header Files\system\string</Filter>
+    </ClInclude>
+    <ClInclude Include="JsonMethods.h">
+      <Filter>Header Files\system\string</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

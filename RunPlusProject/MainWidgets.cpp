@@ -1,8 +1,8 @@
-#include "MainWidgets.h"
+ï»¿#include "MainWidgets.h"
 
 /**
- * \brief Ö÷´°¿ÚGUIº¯Êý
- * \param parent ¸¸´°¿ÚÖ¸Õë
+ * \brief ä¸»çª—å£GUIå‡½æ•°
+ * \param parent çˆ¶çª—å£æŒ‡é’ˆ
  */
 MainWidgets::MainWidgets(QWidget* parent)
     : QMainWindow(parent)
@@ -12,13 +12,12 @@ MainWidgets::MainWidgets(QWidget* parent)
     GetFileMethods methods;
     QFileInfoList fileList;
     methods.GetFileInfo(R"(C:\Users\PathFolder)", &fileList);
-    methods.toJsonList();
 }
 
 void MainWidgets::onToolButton() const
 {
     const auto* select_dialog = new SelectDialog();
-    QString const dir = select_dialog->selectFolder("Ñ¡Ôñ", R"(C:\ProgramData\RunPlus)");
+    QString const dir = select_dialog->selectFolder("é€‰æ‹©", R"(C:\ProgramData\RunPlus)");
     ui.lineEdit->setText(dir);
     delete select_dialog;
 }
