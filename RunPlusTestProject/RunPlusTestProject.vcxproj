@@ -102,6 +102,8 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="JsonMethodsTest.h" />
+    <QtMoc Include="EncodingFormTest.h" />
+    <QtMoc Include="GetFileMethodsTest.h" />
     <ClInclude Include="mainTest.h" />
   </ItemGroup>
   <ItemGroup>

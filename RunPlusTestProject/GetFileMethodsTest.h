@@ -8,17 +8,14 @@
  * └──────────────────────────────────┘
  */
 #pragma once
-#include "tchar.h"
-#include <codecvt>
-#include <QObject>
-#include <QTest>
-#include <JsonMethods.h>
 #include <iostream>
+#include <QObject>
+#include <GetFileMethods.h>
+#include <qobjectdefs.h>
+#include <JsonMethods.h>
 #include <nlohmann/json.hpp>
-/**
- * \brief JSON模块测试类
- */
-class JsonMethodsTest : public QObject
+
+class GetFileMethodsTest : public QObject
 {
     Q_OBJECT
 private slots:
@@ -32,13 +29,14 @@ private slots:
         std::cout << "\n==========>\n" << std::endl;
     }
 
-    /**
-     * \brief 测试方法
-     */
-    void outputJsonStr()
+    void toJsonListTest()
     {
-        JsonMethods jsonMethods;
-        std::string jsonStr = jsonMethods.outputJsonStr(u8R"({"name":"小明"})");
-        std::cout << jsonStr << std::endl;
+        GetFileMethods getFile;
+        QFileInfoList fileInfo;
+        getFile.GetFileInfo(R"(../)", &fileInfo);
+        nlohmann::json jsonStr = getFile.toJsonList(&fileInfo);
+        JsonMethods json;
+        std::string resultStr = json.outputJsonStr(jsonStr);
+        std::cout << resultStr << std::endl;
     }
 };

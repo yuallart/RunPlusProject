@@ -29,6 +29,12 @@
     <QtMoc Include="JsonMethodsTest.h">
       <Filter>Source Files\system</Filter>
     </QtMoc>
+    <QtMoc Include="EncodingFormTest.h">
+      <Filter>Source Files\system</Filter>
+    </QtMoc>
+    <QtMoc Include="GetFileMethodsTest.h">
+      <Filter>Source Files\system</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mainTest.h">

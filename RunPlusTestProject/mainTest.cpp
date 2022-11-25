@@ -1,24 +1,31 @@
-/**
+ï»¿/**
  *  Copyright(c) 2022 Corporation.All rights reserved.
- * ©°©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©´
- * ©¦¡¡\author: Yuallart                                                  
- * ©¦¡¡\version: 1.0.0
- * ©¦  \saying: ²»¾­Ò»·¬º®³¹¹Ç£¬ÔõµÃÃ·»¨ÆË±ÇÏã
- * ©¦  \deprecated: The project must be described...¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡¡                        
- * ©¸©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¤©¼
+ * â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
+ * â”‚ã€€\author: Yuallart
+ * â”‚ã€€\version: 1.0.0
+ * â”‚  \saying: ä¸ç»ä¸€ç•ªå¯’å½»éª¨ï¼Œæ€å¾—æ¢…èŠ±æ‰‘é¼»é¦™
+ * â”‚  \deprecated: The project must be described...ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€ã€€
+ * â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
  */
 
 #include "mainTest.h"
 
 void mainTest::jsonMethods() const
 {
-    JsonMethodsTest json_methods_test;
-    QTest::qExec(&json_methods_test);
+    JsonMethodsTest jsonMethodsTest;
+    QTest::qExec(&jsonMethodsTest);
+}
+
+void mainTest::getFileMethods() const
+{
+    GetFileMethodsTest getFileMethodsTest;
+    QTest::qExec(&getFileMethodsTest);
 }
 
 void main()
 {
-    mainTest main_test;
-    main_test.jsonMethods();
+    const mainTest test;
+    test.jsonMethods();
+    test.getFileMethods();
     char a = getchar();
 }

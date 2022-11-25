@@ -1,4 +1,13 @@
-﻿#pragma once
+﻿/**
+ *  Copyright(c) 2022 Corporation.All rights reserved.
+ * ┌──────────────────────────────────┐
+ * │　\author: Yuallart
+ * │　\version: 1.0.0
+ * │  \saying: 不经一番寒彻骨，怎得梅花扑鼻香
+ * │  \deprecated: The project must be described...　　　　　　　　　　　　
+ * └──────────────────────────────────┘
+ */
+#pragma once
 #include <qdir.h>
 #include <QDebug>
 #include <nlohmann/json.hpp>
@@ -35,10 +44,10 @@ public:
      * @brief 将获取到的文件信息转化为列表
      * @return 返回一个JSON对象
      */
-    nlohmann::json toJsonList(QFileInfoList fileList)
+    nlohmann::json toJsonList(QFileInfoList* fileList)
     {
         std::map<std::string, std::string> fileInfo;
-        for (QFileInfoList::iterator iterator = fileList.begin(); iterator != fileList.end(); ++iterator)
+        for (QFileInfoList::iterator iterator = fileList->begin(); iterator != fileList->end(); ++iterator)
         {
             std::string fileName = iterator.i->t().fileName().toStdString();
             std::string filePath = iterator.i->t().filePath().toStdString();

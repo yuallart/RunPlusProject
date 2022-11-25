@@ -8,15 +8,23 @@
  * └──────────────────────────────────┘
  */
 #pragma once
-#include <map>
-#include <string>
-#include <qtestcase.h>
-#include "JsonMethodsTest.h"
-#include "GetFileMethodsTest.h"
+#include <iostream>
+#include <ostream>
+#include <QObject>
+#include <qobjectdefs.h>
 
-class mainTest
+class EncodingForm : public QObject
 {
-public:
-    void jsonMethods() const;
-    void getFileMethods() const;
+    Q_OBJECT
+private slots:
+    void initTestCase()
+    {
+        std::cout << "\n==========>\n" << std::endl;
+    }
+
+    void cleanupTestCase()
+    {
+        std::cout << "\n==========>\n" << std::endl;
+    }
+
 };
