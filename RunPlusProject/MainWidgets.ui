@@ -1,0 +1,1284 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWidgetsClass</class>
+ <widget class="QMainWindow" name="MainWidgetsClass">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1200</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Microsoft YaHei UI</family>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWidgets</string>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="Minimum">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>241</red>
+         <green>242</green>
+         <blue>246</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>255</red>
+         <green>255</green>
+         <blue>255</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>241</red>
+         <green>242</green>
+         <blue>246</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="Base">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>241</red>
+         <green>242</green>
+         <blue>246</blue>
+        </color>
+       </brush>
+      </colorrole>
+      <colorrole role="Window">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>241</red>
+         <green>242</green>
+         <blue>246</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="font">
+    <font>
+     <family>Microsoft YaHei UI Light</family>
+     <pointsize>10</pointsize>
+     <weight>50</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <layout class="QGridLayout" name="gridLayout" columnstretch="3,0">
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <property name="horizontalSpacing">
+     <number>10</number>
+    </property>
+    <property name="verticalSpacing">
+     <number>0</number>
+    </property>
+    <item row="0" column="0" alignment="Qt::AlignTop">
+     <widget class="QWidget" name="widget" native="true">
+      <property name="minimumSize">
+       <size>
+        <width>280</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>320</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QWidget#widget{
+}</string>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="leftMargin">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>10</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>10</number>
+       </property>
+       <item>
+        <widget class="QWidget" name="widget_2" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="acceptDrops">
+          <bool>true</bool>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget#widget_2{
+background-color:#48dbfb;
+border-radius:8px;
+}
+QWidget#widget_2:hover{
+border:3px solid #48dbfb;
+}</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>110</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>110</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::DefaultContextMenu</enum>
+            </property>
+            <property name="acceptDrops">
+             <bool>false</bool>
+            </property>
+            <property name="accessibleDescription">
+             <string notr="true"/>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="label">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>10</y>
+               <width>30</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="MainWidgets.qrc">:/MainWidgets/resource/settings.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_2">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>10</y>
+               <width>80</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Microsoft YaHei UI Light</family>
+               <pointsize>10</pointsize>
+               <weight>50</weight>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel#label_2{
+color:#000;
+}</string>
+             </property>
+             <property name="text">
+              <string>我的设置</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_3" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="acceptDrops">
+          <bool>true</bool>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget#widget_3{
+border-radius:8px;
+}
+QWidget#widget_3:hover{
+border:3px solid #48dbfb;
+}</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_2">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame_2">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>110</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>110</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::DefaultContextMenu</enum>
+            </property>
+            <property name="acceptDrops">
+             <bool>false</bool>
+            </property>
+            <property name="accessibleDescription">
+             <string notr="true"/>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="label_3">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>10</y>
+               <width>30</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="MainWidgets.qrc">:/MainWidgets/resource/shortcut.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_4">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>10</y>
+               <width>80</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Microsoft YaHei UI Light</family>
+               <pointsize>10</pointsize>
+               <weight>50</weight>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel#label_2{
+color:#000;
+}</string>
+             </property>
+             <property name="text">
+              <string>快捷方式</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_4" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="acceptDrops">
+          <bool>true</bool>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget#widget_4{
+border-radius:8px;
+}
+QWidget#widget_4:hover{
+border:3px solid #48dbfb;
+}</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame_3">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>110</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>110</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::DefaultContextMenu</enum>
+            </property>
+            <property name="acceptDrops">
+             <bool>false</bool>
+            </property>
+            <property name="accessibleDescription">
+             <string notr="true"/>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="label_6">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>10</y>
+               <width>30</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="MainWidgets.qrc">:/MainWidgets/resource/command.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_7">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>10</y>
+               <width>80</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Microsoft YaHei UI Light</family>
+               <pointsize>10</pointsize>
+               <weight>50</weight>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel#label_2{
+color:#000;
+}</string>
+             </property>
+             <property name="text">
+              <string>命令列表</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QWidget" name="widget_6" native="true">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="acceptDrops">
+          <bool>true</bool>
+         </property>
+         <property name="layoutDirection">
+          <enum>Qt::LeftToRight</enum>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QWidget#widget_6{
+border-radius:8px;
+}
+QWidget#widget_6:hover{
+border:3px solid #48dbfb;
+}</string>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame_6">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="minimumSize">
+             <size>
+              <width>110</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>110</width>
+              <height>50</height>
+             </size>
+            </property>
+            <property name="contextMenuPolicy">
+             <enum>Qt::DefaultContextMenu</enum>
+            </property>
+            <property name="acceptDrops">
+             <bool>false</bool>
+            </property>
+            <property name="accessibleDescription">
+             <string notr="true"/>
+            </property>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
+            </property>
+            <property name="autoFillBackground">
+             <bool>false</bool>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <widget class="QLabel" name="label_10">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>10</y>
+               <width>30</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="pixmap">
+              <pixmap resource="MainWidgets.qrc">:/MainWidgets/resource/sponsor.png</pixmap>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+            <widget class="QLabel" name="label_11">
+             <property name="geometry">
+              <rect>
+               <x>30</x>
+               <y>10</y>
+               <width>80</width>
+               <height>30</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Microsoft YaHei UI Light</family>
+               <pointsize>10</pointsize>
+               <weight>50</weight>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QLabel#label_2{
+color:#000;
+}</string>
+             </property>
+             <property name="text">
+              <string>赞助作者</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QStackedWidget" name="stackedWidget">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="minimumSize">
+       <size>
+        <width>690</width>
+        <height>600</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <widget class="QWidget" name="page">
+       <property name="styleSheet">
+        <string notr="true">QWidget#page{
+background-color:rgb(239, 239, 239)
+}</string>
+       </property>
+       <layout class="QFormLayout" name="formLayout">
+        <property name="horizontalSpacing">
+         <number>10</number>
+        </property>
+        <property name="verticalSpacing">
+         <number>10</number>
+        </property>
+        <property name="leftMargin">
+         <number>15</number>
+        </property>
+        <property name="topMargin">
+         <number>15</number>
+        </property>
+        <property name="rightMargin">
+         <number>15</number>
+        </property>
+        <property name="bottomMargin">
+         <number>15</number>
+        </property>
+        <item row="0" column="0">
+         <widget class="QLabel" name="label_9">
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei UI Light</family>
+            <pointsize>12</pointsize>
+            <weight>50</weight>
+            <italic>false</italic>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>默认配置</string>
+          </property>
+          <property name="indent">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QFrame" name="frame_4">
+          <property name="minimumSize">
+           <size>
+            <width>664</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame#frame_4{
+background-color:#fefefe;
+border-radius:10px;
+}
+QLineEdit#lineEdit{
+padding-left:10px;
+padding-right:40px;
+border-radius:8px;
+background-color:rgb(170, 254, 255);
+}
+QToolButton#toolButton{
+background-color:#fefefe;
+border-radius:8px;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_2">
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>10</number>
+           </property>
+           <property name="rightMargin">
+            <number>10</number>
+           </property>
+           <property name="bottomMargin">
+            <number>10</number>
+           </property>
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="font">
+              <font>
+               <family>Microsoft YaHei UI Light</family>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string>可执行文件和快捷方式分开</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Microsoft YaHei UI Light</family>
+               <pointsize>10</pointsize>
+               <weight>50</weight>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>默认储存地址</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" alignment="Qt::AlignRight">
+            <widget class="QRadioButton" name="radioButton">
+             <property name="minimumSize">
+              <size>
+               <width>30</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <property name="autoRepeat">
+              <bool>true</bool>
+             </property>
+             <property name="autoRepeatInterval">
+              <number>100</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QFrame" name="frame_5">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>400</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLineEdit" name="lineEdit">
+              <property name="geometry">
+               <rect>
+                <x>1</x>
+                <y>0</y>
+                <width>400</width>
+                <height>40</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>400</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>350</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Microsoft YaHei UI Light</family>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>C:\ProgramData\RunPlus</string>
+              </property>
+             </widget>
+             <widget class="QToolButton" name="toolButton">
+              <property name="geometry">
+               <rect>
+                <x>365</x>
+                <y>5</y>
+                <width>30</width>
+                <height>30</height>
+               </rect>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>30</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>...</string>
+              </property>
+              <property name="icon">
+               <iconset resource="MainWidgets.qrc">
+                <normaloff>:/MainWidgets/resource/folder.png</normaloff>:/MainWidgets/resource/folder.png</iconset>
+              </property>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="2" column="0">
+         <widget class="QLabel" name="label_12">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Microsoft YaHei UI Light</family>
+            <pointsize>12</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>导出配置</string>
+          </property>
+          <property name="indent">
+           <number>5</number>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="2">
+         <widget class="QFrame" name="frame_7">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>100</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QFrame#frame_7{
+background-color:#d6d6d6;
+border-radius:10px;
+}
+QLineEdit#lineEdit_2{
+padding-left:10px;
+padding-right:40px;
+border-radius:8px;
+background-color:rgb(240, 254, 255);
+}
+QToolButton#toolButton_2{
+background-color:#eeeeee;
+border-radius:8px;
+}</string>
+          </property>
+          <property name="frameShape">
+           <enum>QFrame::StyledPanel</enum>
+          </property>
+          <property name="frameShadow">
+           <enum>QFrame::Raised</enum>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_3">
+           <property name="leftMargin">
+            <number>10</number>
+           </property>
+           <property name="topMargin">
+            <number>10</number>
+           </property>
+           <property name="rightMargin">
+            <number>10</number>
+           </property>
+           <property name="bottomMargin">
+            <number>20</number>
+           </property>
+           <property name="spacing">
+            <number>10</number>
+           </property>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_15">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Microsoft YaHei UI Light</family>
+               <pointsize>10</pointsize>
+               <weight>50</weight>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>启用</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_14">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Microsoft YaHei UI Light</family>
+               <pointsize>10</pointsize>
+               <weight>50</weight>
+               <italic>false</italic>
+               <bold>false</bold>
+              </font>
+             </property>
+             <property name="text">
+              <string>导出本地配置</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QFrame" name="frame_8">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>400</width>
+               <height>40</height>
+              </size>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::StyledPanel</enum>
+             </property>
+             <property name="frameShadow">
+              <enum>QFrame::Raised</enum>
+             </property>
+             <widget class="QLineEdit" name="lineEdit_2">
+              <property name="geometry">
+               <rect>
+                <x>1</x>
+                <y>0</y>
+                <width>400</width>
+                <height>40</height>
+               </rect>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>400</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>350</width>
+                <height>40</height>
+               </size>
+              </property>
+              <property name="font">
+               <font>
+                <family>Microsoft YaHei UI Light</family>
+                <pointsize>10</pointsize>
+                <weight>50</weight>
+                <italic>false</italic>
+                <bold>false</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>C:\Users</string>
+              </property>
+             </widget>
+             <widget class="QToolButton" name="toolButton_2">
+              <property name="geometry">
+               <rect>
+                <x>365</x>
+                <y>5</y>
+                <width>30</width>
+                <height>30</height>
+               </rect>
+              </property>
+              <property name="maximumSize">
+               <size>
+                <width>30</width>
+                <height>16777215</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true"/>
+              </property>
+              <property name="text">
+               <string>...</string>
+              </property>
+              <property name="icon">
+               <iconset resource="MainWidgets.qrc">
+                <normaloff>:/MainWidgets/resource/folder.png</normaloff>:/MainWidgets/resource/folder.png</iconset>
+              </property>
+             </widget>
+            </widget>
+           </item>
+           <item row="0" column="1" alignment="Qt::AlignRight">
+            <widget class="QRadioButton" name="radioButton_2">
+             <property name="minimumSize">
+              <size>
+               <width>30</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="iconSize">
+              <size>
+               <width>24</width>
+               <height>24</height>
+              </size>
+             </property>
+             <property name="checked">
+              <bool>false</bool>
+             </property>
+             <property name="autoRepeat">
+              <bool>true</bool>
+             </property>
+             <property name="autoRepeatInterval">
+              <number>100</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="4" column="0" colspan="2">
+         <widget class="QWidget" name="widget_5" native="true">
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>300</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>16777215</height>
+           </size>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="page_2"/>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources>
+  <include location="MainWidgets.qrc"/>
+ </resources>
+ <connections/>
+</ui>

@@ -1,0 +1,10 @@
+<RCC>
+    <qresource prefix="/MainWidgets">
+        <file>resource/command.png</file>
+        <file>resource/shortcut.png</file>
+        <file>resource/settings.png</file>
+        <file>resource/folder.png</file>
+        <file>resource/select.png</file>
+        <file>resource/sponsor.png</file>
+    </qresource>
+</RCC>
