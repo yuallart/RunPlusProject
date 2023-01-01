@@ -22,6 +22,16 @@ https://raw.githubusercontent.com/yuallart/RunPlusProject/master/x64/Download/Ru
 
 ### 配置篇
 
+运行项目前须知，请仔细看以下的要点
+
+**QT插件**
+
+> 必须下载Visual Studio中的QT插件，不然会导致加载不了项目等问题出现
+
+**Nuget包**
+
+> 项目中用到了nlohmann.json库，必须安装此库才能正常运行
+
 #### RunPlusProject
 
 - **项目所使用的配置**
@@ -31,6 +41,7 @@ https://raw.githubusercontent.com/yuallart/RunPlusProject/master/x64/Download/Ru
   - 编译器：Microsoft Visual Studio 2022
   - Windows SDK：10.0
   - 平台工具集：Visual Studio 2022 (v143)
+  - C++语言标准：C++14
 
 ![Screenshot 2022-10-13 141724](README.assets/Screenshot%202022-10-13%20141724.png)
 
@@ -48,10 +59,10 @@ https://raw.githubusercontent.com/yuallart/RunPlusProject/master/x64/Download/Ru
 - **配置所需包含的目录**
 
   在visual studio中是允许使用相对路径进行配置的，具体情况请具体处理
+  
+  > 需要注意的是，没有正确配置以下的包含目录，会导致测试项目不可用
 
 ![image-20221013140504765](README.assets/image-20221013140504765.png)
-
-> 如没有正确配置以上的包含目录，会导致测试项目不可用
 
 - 配置所需包含的QT模块
 
@@ -67,8 +78,6 @@ https://raw.githubusercontent.com/yuallart/RunPlusProject/master/x64/Download/Ru
 
 ![image-20221013141327983](README.assets/image-20221013141327983.png)
 
-> 缺少此引用有可能会导致测试项目无法运行
-
-## Tips ->
+## Tips
 
 **具体的各个项目的详细文档请查看具体根项目下的README.md文件**

@@ -10,22 +10,11 @@
 
 #include "mainTest.h"
 
-void mainTest::jsonMethods() const
-{
-    JsonMethodsTest jsonMethodsTest;
-    QTest::qExec(&jsonMethodsTest);
-}
-
-void mainTest::getFileMethods() const
-{
-    GetFileMethodsTest getFileMethodsTest;
-    QTest::qExec(&getFileMethodsTest);
-}
-
 void main()
 {
     const mainTest test;
-    test.jsonMethods();
+    // test.jsonMethods();
     test.getFileMethods();
+    // test.putFileMethods();
     char a = getchar();
 }

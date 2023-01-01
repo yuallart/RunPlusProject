@@ -18,6 +18,9 @@
 class GetFileMethodsTest : public QObject
 {
     Q_OBJECT
+public:
+    GetFileMethods getFileMethods;
+    JsonMethods jsonMethods;
 private slots:
     void initTestCase()
     {
@@ -31,12 +34,19 @@ private slots:
 
     void toJsonListTest()
     {
-        GetFileMethods getFile;
-        QFileInfoList fileInfo;
-        getFile.GetFileInfo(R"(../)", &fileInfo);
-        nlohmann::json jsonStr = getFile.toJsonList(&fileInfo);
-        JsonMethods json;
-        std::string resultStr = json.outputJsonStr(jsonStr);
-        std::cout << resultStr << std::endl;
+        nlohmann::json* fileInfoJson = getFileMethods.getFileInfo(R"(C:\Users\ShortcutFolder)")
+                                                     .toInfoJson()
+                                                     .getFileInfoJson();
+        std::string fileInfoStr = jsonMethods.outputJsonStr(*fileInfoJson);
+        std::cout << fileInfoStr << std::endl;
+    }
+
+    void getFileTextTest()
+    {
+        QString fileName = R"(C:\Users\Administrator\Desktop\text.json)";
+        QString text;
+        QString error = getFileMethods.getFileText(fileName, text);
+        qDebug() << error;
+        qDebug() << text;
     }
 };

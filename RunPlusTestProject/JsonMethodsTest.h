@@ -15,9 +15,9 @@
 #include <JsonMethods.h>
 #include <iostream>
 #include <nlohmann/json.hpp>
-/**
- * \brief JSON模块测试类
- */
+ /**
+  * \brief JSON模块测试类
+  */
 class JsonMethodsTest : public QObject
 {
     Q_OBJECT
@@ -38,7 +38,11 @@ private slots:
     void outputJsonStr()
     {
         JsonMethods jsonMethods;
-        std::string jsonStr = jsonMethods.outputJsonStr(u8R"({"name":"小明"})");
-        std::cout << jsonStr << std::endl;
+        const auto firstJsonStr = jsonMethods.outputJsonStr(R"({"name":"小明"})");
+        const auto secondJsonStr = jsonMethods.outputJsonStr(std::string(R"({"gender":"男"})"));
+        const auto thirdJsonStr = jsonMethods.outputJsonStr(nlohmann::json{ "work",u8"程序员" });
+        std::cout << firstJsonStr << std::endl;
+        std::cout << secondJsonStr << std::endl;
+        std::cout << thirdJsonStr << std::endl;
     }
 };

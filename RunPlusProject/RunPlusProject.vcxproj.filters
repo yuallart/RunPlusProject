@@ -42,6 +42,9 @@
     <Filter Include="Header Files\system\string">
       <UniqueIdentifier>{e2ea7544-72c7-4dd6-8a71-7c6f7735c808}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\config">
+      <UniqueIdentifier>{857b6286-6d2a-42c5-92db-7d49a2e2eabb}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="MainWidgets.qrc">
@@ -80,6 +83,12 @@
     </ClInclude>
     <ClInclude Include="JsonMethods.h">
       <Filter>Header Files\system\string</Filter>
+    </ClInclude>
+    <ClInclude Include="PutFileMethods.h">
+      <Filter>Header Files\system\file</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigParam.h">
+      <Filter>Header Files\config</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

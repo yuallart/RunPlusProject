@@ -11,48 +11,102 @@
 #include <qdir.h>
 #include <QDebug>
 #include <nlohmann/json.hpp>
-
 /**
  * \brief 文件处理类
  */
 class GetFileMethods
 {
-private:
+    nlohmann::json* fileInfoJson = new nlohmann::basic_json<>;
+    QFileInfoList* fileInfoList = new QFileInfoList();
 public:
+    QFileInfoList* getFileInfoList() const
+    {
+        return fileInfoList;
+    }
+
+    nlohmann::json* getFileInfoJson() const
+    {
+        return fileInfoJson;
+    }
+
     /**
      * \brief 此函数用于获取指定文件路径下的所有文件，只检索文件
      * \param filePath 接收一个目录地址字符串
-     * \param fileList 接收一个list地址
      * \return 返回文件列表的长度
      */
-    int GetFileInfo(const char* filePath, QFileInfoList* fileList)
+    GetFileMethods& getFileInfo(const char* filePath)
     {
-        //QDir的路径一定要是全路径，相对路径会有错误
         QDir dir(QString::fromLocal8Bit(filePath));
         if (!dir.exists())
         {
-            return -1;
+            qDebug() << "Read failure";
+            return *this;
         }
         dir.setFilter(QDir::Files | QDir::NoDotAndDotDot);
         dir.setSorting(QDir::DirsFirst);
         //指向一个list
-        *fileList = dir.entryInfoList();
-        return fileList->length();
+        *fileInfoList = dir.entryInfoList();
+        return *this;
     }
 
     /**
      * @brief 将获取到的文件信息转化为列表
      * @return 返回一个JSON对象
      */
-    nlohmann::json toJsonList(QFileInfoList* fileList)
+    GetFileMethods& toInfoJson()
     {
+        if (fileInfoList->empty())
+        {
+            qDebug() << "Read failure";
+            return *this;
+        }
         std::map<std::string, std::string> fileInfo;
-        for (QFileInfoList::iterator iterator = fileList->begin(); iterator != fileList->end(); ++iterator)
+        for (QFileInfoList::iterator iterator = fileInfoList->begin(); iterator != fileInfoList->end(); ++iterator)
         {
             std::string fileName = iterator.i->t().fileName().toStdString();
             std::string filePath = iterator.i->t().filePath().toStdString();
             fileInfo.insert(std::make_pair(fileName, filePath));
         }
-        return nlohmann::json(fileInfo);
+        *fileInfoJson = nlohmann::json(fileInfo);
+        return *this;
+    }
+
+    QString getFileText(const char* filePath, QString& fileText, const QByteArray& openCodec = "UTF-8") const
+    {
+        QFile file(QString::fromLocal8Bit(filePath));
+        if (!file.exists())
+        {
+            qDebug() << "Read failure";
+            return file.errorString();
+        }
+        if (file.open(QIODevice::ReadOnly))
+        {
+            QTextStream textStream(&file);
+            textStream.setCodec(openCodec);
+            fileText = textStream.readAll();
+        }
+        return file.errorString();
+    }
+
+    /**
+     * \brief 文件内容读取方法
+     * \param filePath 文件路径
+     * \param fileText 文件内容
+     * \param fileCodec 使用什么编码打开
+     * \return 返回读取到的文件内容
+     */
+    QString getFileText(const QString& filePath, QString& fileText, const QByteArray& fileCodec = "UTF-8") const
+    {
+        QFile file(filePath.toUtf8());
+        if (file.exists())
+        {
+            if (file.open(QIODevice::ReadOnly))
+            {
+                QTextStream textStream(&file);
+                textStream.setCodec(fileCodec);
+                fileText = textStream.readAll();
+            }
+        }
+        return file.errorString();
     }
 };

@@ -8,15 +8,29 @@
  * └──────────────────────────────────┘
  */
 #pragma once
-#include <map>
-#include <string>
 #include <qtestcase.h>
 #include "JsonMethodsTest.h"
 #include "GetFileMethodsTest.h"
+#include "PutFileMethodsTest.h"
 
 class mainTest
 {
 public:
-    void jsonMethods() const;
-    void getFileMethods() const;
+    void jsonMethods() const
+    {
+        JsonMethodsTest jsonMethodsTest;
+        QTest::qExec(&jsonMethodsTest);
+    }
+
+    void getFileMethods() const
+    {
+        GetFileMethodsTest getFileMethodsTest;
+        QTest::qExec(&getFileMethodsTest);
+    }
+
+    void putFileMethods() const
+    {
+        PutFileMethodsTest putFileMethodsTest;
+        QTest::qExec(&putFileMethodsTest);
+    }
 };

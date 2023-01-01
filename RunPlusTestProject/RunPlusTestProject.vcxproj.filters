@@ -24,6 +24,9 @@
     <Filter Include="Source Files\system">
       <UniqueIdentifier>{01e689a9-0bfd-4ee7-ab83-b527d1d5bc01}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\system\file">
+      <UniqueIdentifier>{db7497e8-93b5-47ce-9925-d026e2d7d678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="JsonMethodsTest.h">
@@ -33,7 +36,10 @@
       <Filter>Source Files\system</Filter>
     </QtMoc>
     <QtMoc Include="GetFileMethodsTest.h">
-      <Filter>Source Files\system</Filter>
+      <Filter>Source Files\system\file</Filter>
+    </QtMoc>
+    <QtMoc Include="PutFileMethodsTest.h">
+      <Filter>Source Files\system\file</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>

@@ -1,4 +1,4 @@
-/**
+﻿/**
  *  Copyright(c) 2022 Corporation.All rights reserved.
  * ┌──────────────────────────────────┐
  * │　\author: Yuallart
@@ -8,23 +8,38 @@
  * └──────────────────────────────────┘
  */
 #pragma once
-#include <QDebug>
 #include "MainWidgets.h"
 #include "ui_MainWidgets.h"
 #include "SelectDialog.h"
 #include "GetFileMethods.h"
+#include "JsonMethods.h"
+#include <qsignalmapper.h>
+#include <nlohmann/json.hpp>
+#include "ConfigParam.h"
+#include "PutFileMethods.h"
+
+/**
+ * \brief 主窗口
+ */
+extern nlohmann::json globalConfig;
 
 class MainWidgets : public QMainWindow
 {
     Q_OBJECT
 
 public slots:
-    void onToolButton() const;
+    void onToolButton(QString target) const;
 
 public:
     explicit MainWidgets(QWidget* parent = nullptr);
     ~MainWidgets() override;
-
+    void initFirstToolButton() const;
+    void initGlobalConfig() const;
 private:
-    Ui::MainWidgetsClass ui;
+    Ui::MainWidgetsClass ui{};
+    QSignalMapper* signalMapper;
+    GetFileMethods getFileMethods;
+    JsonMethods jsonMethods;
+    ConfigParam configParam;
+    PutFileMethods putFileMethods;
 };

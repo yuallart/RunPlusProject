@@ -29,12 +29,12 @@
     <Import Project="$(QtMsBuild)\qt_defaults.props" />
   </ImportGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="QtSettings">
-    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtInstall>5.9.9_msvc2017_64</QtInstall>
     <QtModules>core;testlib;</QtModules>
     <QtBuildConfig>debug</QtBuildConfig>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'" Label="QtSettings">
-    <QtInstall>5.15.2_msvc2019_64</QtInstall>
+    <QtInstall>5.9.9_msvc2017_64</QtInstall>
     <QtModules>core;testlib;</QtModules>
     <QtBuildConfig>release</QtBuildConfig>
   </PropertyGroup>
@@ -101,6 +101,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <QtMoc Include="PutFileMethodsTest.h" />
     <QtMoc Include="JsonMethodsTest.h" />
     <QtMoc Include="EncodingFormTest.h" />
     <QtMoc Include="GetFileMethodsTest.h" />
