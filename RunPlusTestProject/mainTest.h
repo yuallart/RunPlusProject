@@ -10,7 +10,6 @@
 #pragma once
 #include <qtestcase.h>
 #include "JsonMethodsTest.h"
-#include "GetFileMethodsTest.h"
 #include "PutFileMethodsTest.h"
 
 class mainTest
@@ -20,12 +19,6 @@ public:
     {
         JsonMethodsTest jsonMethodsTest;
         QTest::qExec(&jsonMethodsTest);
-    }
-
-    void getFileMethods() const
-    {
-        GetFileMethodsTest getFileMethodsTest;
-        QTest::qExec(&getFileMethodsTest);
     }
 
     void putFileMethods() const

@@ -2,7 +2,7 @@
 #include <iostream>
 #include <QObject>
 
-class PutFileMethodsTest : public QObject
+class GetFileInfoMethodsTest : public QObject
 {
     Q_OBJECT
 private slots:
@@ -14,10 +14,5 @@ private slots:
     void cleanupTestCase()
     {
         std::cout << "\n==========>\n" << std::endl;
-    }
-
-    void writeFileTest()
-    {
-       
     }
 };

@@ -13,7 +13,7 @@
 #include <QObject>
 #include <qobjectdefs.h>
 
-class EncodingForm : public QObject
+class EncodingMethods : public QObject
 {
     Q_OBJECT
 private slots:
@@ -26,5 +26,4 @@ private slots:
     {
         std::cout << "\n==========>\n" << std::endl;
     }
-
 };

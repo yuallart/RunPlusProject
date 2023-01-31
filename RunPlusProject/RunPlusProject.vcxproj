@@ -97,8 +97,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GetFileMethods.h" />
+    <ClCompile Include="GetFileInfoMethods.cpp" />
+    <ClCompile Include="GetFileInfoMethods.h" />
+    <ClCompile Include="jsonMethods.cpp" />
+    <ClCompile Include="ReadFileMethods.cpp" />
     <ClCompile Include="SelectDialog.h" />
+    <ClCompile Include="WriteFileMethods.cpp" />
     <QtRcc Include="MainWidgets.qrc" />
     <QtUic Include="MainWidgets.ui" />
     <QtMoc Include="MainWidgets.h" />
@@ -110,10 +114,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ConfigParam.h" />
-    <ClInclude Include="EncodingForm.h" />
+    <ClInclude Include="EncodingMethods.h" />
     <ClInclude Include="JsonMethods.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="PutFileMethods.h" />
+    <ClInclude Include="ReadFileMethods.h" />
+    <ClInclude Include="WriteFileMethods.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

@@ -33,9 +33,6 @@
     <Filter Include="Source Files\widget">
       <UniqueIdentifier>{50bfd7f5-d203-4449-a84d-a41c4f2d24cf}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\test">
-      <UniqueIdentifier>{0ab6e8b3-07cd-4149-8511-aef14aa9398c}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\system\file">
       <UniqueIdentifier>{1eebabbc-b179-40fb-8f79-5d086040849a}</UniqueIdentifier>
     </Filter>
@@ -44,6 +41,15 @@
     </Filter>
     <Filter Include="Header Files\config">
       <UniqueIdentifier>{857b6286-6d2a-42c5-92db-7d49a2e2eabb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\system">
+      <UniqueIdentifier>{13382d8d-847d-4e23-af0f-2534f64b61aa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\system\file">
+      <UniqueIdentifier>{24bc5d31-4280-4f30-807b-44f31b2edf8d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\system\string">
+      <UniqueIdentifier>{75b53dee-ffab-44e9-b339-2d750c8771d5}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -70,25 +76,40 @@
     <ClCompile Include="MainWidgets.cpp">
       <Filter>Source Files\widget</Filter>
     </ClCompile>
-    <ClCompile Include="GetFileMethods.h">
+    <ClCompile Include="GetFileInfoMethods.h">
       <Filter>Header Files\system\file</Filter>
+    </ClCompile>
+    <ClCompile Include="GetFileInfoMethods.cpp">
+      <Filter>Source Files\system\file</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadFileMethods.cpp">
+      <Filter>Source Files\system\file</Filter>
+    </ClCompile>
+    <ClCompile Include="WriteFileMethods.cpp">
+      <Filter>Source Files\system\file</Filter>
+    </ClCompile>
+    <ClCompile Include="jsonMethods.cpp">
+      <Filter>Source Files\system\string</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EncodingForm.h">
+    <ClInclude Include="EncodingMethods.h">
       <Filter>Header Files\system\string</Filter>
     </ClInclude>
     <ClInclude Include="JsonMethods.h">
       <Filter>Header Files\system\string</Filter>
     </ClInclude>
-    <ClInclude Include="PutFileMethods.h">
+    <ClInclude Include="WriteFileMethods.h">
       <Filter>Header Files\system\file</Filter>
     </ClInclude>
     <ClInclude Include="ConfigParam.h">
       <Filter>Header Files\config</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadFileMethods.h">
+      <Filter>Header Files\system\file</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

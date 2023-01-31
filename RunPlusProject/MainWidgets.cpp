@@ -14,6 +14,7 @@ MainWidgets::MainWidgets(QWidget* parent): QMainWindow(parent)
     initFirstToolButton();
 }
 
+MainWidgets::~MainWidgets() = default;
 /**
  * \brief 点击事件
  * \param target 接收的参数
@@ -27,8 +28,6 @@ void MainWidgets::onToolButton(QString target) const
     delete select_dialog;
 }
 
-MainWidgets::~MainWidgets() = default;
-
 void MainWidgets::initFirstToolButton() const
 {
     connect(ui.toolButton, SIGNAL(clicked()), signalMapper, SLOT(map()));
@@ -38,8 +37,15 @@ void MainWidgets::initFirstToolButton() const
 
 void MainWidgets::initGlobalConfig() const
 {
-    EncodingForm
-    const std::string jsonStr = jsonMethods.outputJsonStr(configParam.configJson, false);
-    std::cout <<  << std::endl;
-    putFileMethods.writeFile(configParam.configFilePath.toLatin1(), jsonStr.c_str());
+    const bool isFileExist = getFileInfoMethods.isFileExist(configParam.configFilePath);
+    if (!isFileExist)
+    {
+        const std::string jsonStr = jsonMethods.outputJsonStr(configParam.configJson);
+        writeFileMethods.writeFile(configParam.configFilePath, QString::fromUtf8(jsonStr.c_str()));
+    }
+    else
+    {
+        QString fileText;
+        const QString errorText = readFileMethods.readFileAllData(configParam.configFilePath, fileText);
+    }
 }

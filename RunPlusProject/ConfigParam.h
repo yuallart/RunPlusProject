@@ -6,7 +6,7 @@ using json = nlohmann::json;
 struct ConfigParam
 {
     /*配置文件的位置*/
-    QString configFilePath = u8"./config.json";
+    QString configFilePath = u8R"(./config.json)";
     json configJson = {
         /*环境变量指向的根目录*/
         {"subjectPathFolder", "C:/Users/Public/RunPlusFolder"},

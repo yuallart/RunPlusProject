@@ -13,8 +13,5 @@
 void main()
 {
     const mainTest test;
-    // test.jsonMethods();
-    test.getFileMethods();
-    // test.putFileMethods();
     char a = getchar();
 }

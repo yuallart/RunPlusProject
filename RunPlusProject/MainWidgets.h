@@ -11,13 +11,13 @@
 #include "MainWidgets.h"
 #include "ui_MainWidgets.h"
 #include "SelectDialog.h"
-#include "GetFileMethods.h"
+#include "GetFileInfoMethods.h"
 #include "JsonMethods.h"
 #include <qsignalmapper.h>
 #include <nlohmann/json.hpp>
 #include "ConfigParam.h"
-#include "PutFileMethods.h"
-
+#include "WriteFileMethods.h"
+#include "ReadFileMethods.h"
 /**
  * \brief 主窗口
  */
@@ -38,8 +38,10 @@ public:
 private:
     Ui::MainWidgetsClass ui{};
     QSignalMapper* signalMapper;
-    GetFileMethods getFileMethods;
+    GetFileInfoMethods getFileInfoMethods;
     JsonMethods jsonMethods;
     ConfigParam configParam;
-    PutFileMethods putFileMethods;
+    WriteFileMethods writeFileMethods;
+    EncodingMethods encodingForm;
+    ReadFileMethods readFileMethods;
 };

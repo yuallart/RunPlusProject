@@ -27,24 +27,27 @@
     <Filter Include="Source Files\system\file">
       <UniqueIdentifier>{db7497e8-93b5-47ce-9925-d026e2d7d678}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\system\string">
+      <UniqueIdentifier>{a9d70d40-6727-4edc-b6ab-d406dea9ea93}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="JsonMethodsTest.h">
-      <Filter>Source Files\system</Filter>
-    </QtMoc>
-    <QtMoc Include="EncodingFormTest.h">
-      <Filter>Source Files\system</Filter>
-    </QtMoc>
-    <QtMoc Include="GetFileMethodsTest.h">
-      <Filter>Source Files\system\file</Filter>
-    </QtMoc>
     <QtMoc Include="PutFileMethodsTest.h">
       <Filter>Source Files\system\file</Filter>
+    </QtMoc>
+    <QtMoc Include="EncodingFormTest.h">
+      <Filter>Source Files\system\string</Filter>
+    </QtMoc>
+    <QtMoc Include="JsonMethodsTest.h">
+      <Filter>Source Files\system\string</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mainTest.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GetFileInfoMethodsTest.h">
+      <Filter>Source Files\system\file</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

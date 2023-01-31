@@ -7,6 +7,7 @@
  * │  \deprecated: The project must be described...　　　　　　　　　　　　
  * └──────────────────────────────────┘
  */
+
 #pragma once
 #include <QTextCodec>
 #include <QFile>
@@ -15,21 +16,21 @@
 /**
  * \brief 编码转换类
  */
-class EncodingForm
+class EncodingMethods
 {
 public:
-    std::string encodingToGBK(const std::string& target) const
+    QString encodingToGBK(const std::string& target) const
     {
         const QTextCodec* utf8 = QTextCodec::codecForName("UTF-8");
         const QString str = utf8->toUnicode(target.c_str());
-        return str.toLocal8Bit().toStdString();
+        return str.toLocal8Bit();
     }
 
-    std::string encodingToGBK(const char* target) const
+    QString encodingToGBK(const char* target) const
     {
         const QTextCodec* utf8 = QTextCodec::codecForName("UTF-8");
         const QString str = utf8->toUnicode(target);
-        return str.toLocal8Bit().toStdString();
+        return str.toLocal8Bit();
     }
 
     QString encodingToGBK(const QByteArray& target) const

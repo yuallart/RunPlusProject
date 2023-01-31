@@ -10,16 +10,15 @@
 #pragma once
 #include <iostream>
 #include <QObject>
-#include <GetFileMethods.h>
+#include <GetFileInfoMethods.h>
 #include <qobjectdefs.h>
 #include <JsonMethods.h>
-#include <nlohmann/json.hpp>
 
-class GetFileMethodsTest : public QObject
+class GetInfoFileMethodsTest : public QObject
 {
     Q_OBJECT
 public:
-    GetFileMethods getFileMethods;
+    GetFileInfoMethods getFileInfo;
     JsonMethods jsonMethods;
 private slots:
     void initTestCase()
@@ -34,19 +33,11 @@ private slots:
 
     void toJsonListTest()
     {
-        nlohmann::json* fileInfoJson = getFileMethods.getFileInfo(R"(C:\Users\ShortcutFolder)")
-                                                     .toInfoJson()
-                                                     .getFileInfoJson();
+        nlohmann::json* fileInfoJson = getFileInfo
+                                       .getFileInfo(R"(C:\Users\ShortcutFolder)")
+                                       .toInfoJson()
+                                       .getFileInfoJson();
         std::string fileInfoStr = jsonMethods.outputJsonStr(*fileInfoJson);
         std::cout << fileInfoStr << std::endl;
-    }
-
-    void getFileTextTest()
-    {
-        QString fileName = R"(C:\Users\Administrator\Desktop\text.json)";
-        QString text;
-        QString error = getFileMethods.getFileText(fileName, text);
-        qDebug() << error;
-        qDebug() << text;
     }
 };

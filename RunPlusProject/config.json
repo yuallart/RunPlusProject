@@ -1,1 +1,13 @@
-UTF-8
+{
+  "isSeparate": [
+    {
+      "condition": true,
+      "details": {
+        "别名文件": "/aliasFolder",
+        "快捷方式": "/shortcut",
+        "脚本文件": "/script"
+      }
+    }
+  ],
+  "subjectPathFolder": "C:/Users/Public/RunPlusFolder"
+}

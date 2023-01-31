@@ -38,8 +38,8 @@ private slots:
     void outputJsonStr()
     {
         JsonMethods jsonMethods;
-        const auto firstJsonStr = jsonMethods.outputJsonStr(R"({"name":"小明"})");
-        const auto secondJsonStr = jsonMethods.outputJsonStr(std::string(R"({"gender":"男"})"));
+        const auto firstJsonStr = jsonMethods.outputJsonStr(u8R"({"name":"小明"})");
+        const auto secondJsonStr = jsonMethods.outputJsonStr(std::string(u8R"({"gender":"男"})"));
         const auto thirdJsonStr = jsonMethods.outputJsonStr(nlohmann::json{ "work",u8"程序员" });
         std::cout << firstJsonStr << std::endl;
         std::cout << secondJsonStr << std::endl;
