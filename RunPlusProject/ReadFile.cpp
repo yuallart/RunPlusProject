@@ -9,7 +9,6 @@
  */
 
 #include "ReadFile.h"
-#include <iostream>
 
  /**
   * \brief 文件内容读取方法
