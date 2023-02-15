@@ -16,7 +16,7 @@
 /**
  * \brief 编码转换类
  */
-class EncodingMethods
+class CodingParse
 {
 public:
     QString encodingToGBK(const std::string& target) const

@@ -39,9 +39,6 @@
     <Filter Include="Header Files\system\string">
       <UniqueIdentifier>{e2ea7544-72c7-4dd6-8a71-7c6f7735c808}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\config">
-      <UniqueIdentifier>{857b6286-6d2a-42c5-92db-7d49a2e2eabb}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Source Files\system">
       <UniqueIdentifier>{13382d8d-847d-4e23-af0f-2534f64b61aa}</UniqueIdentifier>
     </Filter>
@@ -50,6 +47,15 @@
     </Filter>
     <Filter Include="Source Files\system\string">
       <UniqueIdentifier>{75b53dee-ffab-44e9-b339-2d750c8771d5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\config">
+      <UniqueIdentifier>{857b6286-6d2a-42c5-92db-7d49a2e2eabb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\system\command">
+      <UniqueIdentifier>{1fb10615-9ae5-42c7-ab58-1579a93c77f0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\system\command">
+      <UniqueIdentifier>{17f72fc6-661d-4b98-8df7-a758199baf5a}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -76,39 +82,42 @@
     <ClCompile Include="MainWidgets.cpp">
       <Filter>Source Files\widget</Filter>
     </ClCompile>
-    <ClCompile Include="GetFileInfoMethods.h">
+    <ClCompile Include="GetFileInfo.h">
       <Filter>Header Files\system\file</Filter>
     </ClCompile>
-    <ClCompile Include="GetFileInfoMethods.cpp">
+    <ClCompile Include="GetFileInfo.cpp">
       <Filter>Source Files\system\file</Filter>
     </ClCompile>
-    <ClCompile Include="ReadFileMethods.cpp">
+    <ClCompile Include="WriteFile.cpp">
       <Filter>Source Files\system\file</Filter>
     </ClCompile>
-    <ClCompile Include="WriteFileMethods.cpp">
-      <Filter>Source Files\system\file</Filter>
+    <ClCompile Include="ExecuteProcess.cpp">
+      <Filter>Source Files\system\command</Filter>
     </ClCompile>
-    <ClCompile Include="jsonMethods.cpp">
-      <Filter>Source Files\system\string</Filter>
+    <ClCompile Include="ReadFile.cpp">
+      <Filter>Source Files\system\file</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="main.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="EncodingMethods.h">
+    <ClInclude Include="CodingParse.h">
       <Filter>Header Files\system\string</Filter>
     </ClInclude>
-    <ClInclude Include="JsonMethods.h">
+    <ClInclude Include="JsonParse.h">
       <Filter>Header Files\system\string</Filter>
     </ClInclude>
-    <ClInclude Include="WriteFileMethods.h">
+    <ClInclude Include="WriteFile.h">
       <Filter>Header Files\system\file</Filter>
     </ClInclude>
-    <ClInclude Include="ConfigParam.h">
+    <ClInclude Include="MainConfig.h">
       <Filter>Header Files\config</Filter>
     </ClInclude>
-    <ClInclude Include="ReadFileMethods.h">
+    <ClInclude Include="ExecuteProcess.h">
+      <Filter>Header Files\system\command</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadFile.h">
       <Filter>Header Files\system\file</Filter>
     </ClInclude>
   </ItemGroup>

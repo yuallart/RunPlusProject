@@ -13,6 +13,9 @@ class WidgetInit
 private:
     MainWidgets* win = nullptr;
 public:
+    explicit WidgetInit(MainWidgets* const win): win(win)
+    {
+    }
 
     MainWidgets* get_win() const
     {
@@ -24,24 +27,9 @@ public:
         this->win = win;
     }
 
-    void initWidgets() const
-    {
-        this->initTitle();
-        this->initBackgroundColor();
-        win->show();
-    }
+    void initWidgets() const;
 
-    void initTitle() const
-    {
-        win->setWindowTitle(QString::fromLocal8Bit("运行增强器"));
-    }
+    void initTitle() const;
 
-    void initBackgroundColor() const
-    {
-        QPalette pal(win->palette());
-        pal.setColor(QPalette::Background, "#f1f2f6");
-        win->setAutoFillBackground(true);
-        win->setPalette(pal);
-        win->show();
-    }
+    void initBackgroundColor() const;
 };

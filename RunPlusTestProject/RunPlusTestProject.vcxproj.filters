@@ -21,33 +21,36 @@
       <UniqueIdentifier>{639EADAA-A684-42e4-A9AD-28FC9BCB8F7C}</UniqueIdentifier>
       <Extensions>ts</Extensions>
     </Filter>
-    <Filter Include="Source Files\system">
+    <Filter Include="Header Files\system">
       <UniqueIdentifier>{01e689a9-0bfd-4ee7-ab83-b527d1d5bc01}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\system\file">
+    <Filter Include="Header Files\system\file">
       <UniqueIdentifier>{db7497e8-93b5-47ce-9925-d026e2d7d678}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Source Files\system\string">
+    <Filter Include="Header Files\system\string">
       <UniqueIdentifier>{a9d70d40-6727-4edc-b6ab-d406dea9ea93}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtMoc Include="PutFileMethodsTest.h">
-      <Filter>Source Files\system\file</Filter>
+    <QtMoc Include="WriteFileTest.h">
+      <Filter>Header Files\system\file</Filter>
     </QtMoc>
-    <QtMoc Include="EncodingFormTest.h">
-      <Filter>Source Files\system\string</Filter>
+    <QtMoc Include="CodingParse.h">
+      <Filter>Header Files\system\string</Filter>
     </QtMoc>
-    <QtMoc Include="JsonMethodsTest.h">
-      <Filter>Source Files\system\string</Filter>
+    <QtMoc Include="JsonTest.h">
+      <Filter>Header Files\system\string</Filter>
+    </QtMoc>
+    <QtMoc Include="GetFileInfoTest.h">
+      <Filter>Header Files\system\file</Filter>
+    </QtMoc>
+    <QtMoc Include="ReadFileTest.h">
+      <Filter>Header Files\system\file</Filter>
     </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="mainTest.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="GetFileInfoMethodsTest.h">
-      <Filter>Source Files\system\file</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

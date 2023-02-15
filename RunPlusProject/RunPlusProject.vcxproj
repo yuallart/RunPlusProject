@@ -14,6 +14,7 @@
     <ProjectGuid>{C2CBC079-40BE-49AE-819D-453B8E677600}</ProjectGuid>
     <Keyword>QtVS_v304</Keyword>
     <QtMsBuild Condition="'$(QtMsBuild)'=='' OR !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -68,6 +69,7 @@
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <FloatingPointExceptions>true</FloatingPointExceptions>
+      <LanguageStandard_C>stdc11</LanguageStandard_C>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'" Label="Configuration">
@@ -97,12 +99,12 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="GetFileInfoMethods.cpp" />
-    <ClCompile Include="GetFileInfoMethods.h" />
-    <ClCompile Include="jsonMethods.cpp" />
-    <ClCompile Include="ReadFileMethods.cpp" />
+    <ClCompile Include="ExecuteProcess.cpp" />
+    <ClCompile Include="GetFileInfo.cpp" />
+    <ClCompile Include="GetFileInfo.h" />
+    <ClCompile Include="ReadFile.cpp" />
     <ClCompile Include="SelectDialog.h" />
-    <ClCompile Include="WriteFileMethods.cpp" />
+    <ClCompile Include="WriteFile.cpp" />
     <QtRcc Include="MainWidgets.qrc" />
     <QtUic Include="MainWidgets.ui" />
     <QtMoc Include="MainWidgets.h" />
@@ -113,12 +115,13 @@
     <ResourceCompile Include="RunPlusProject.rc" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ConfigParam.h" />
-    <ClInclude Include="EncodingMethods.h" />
-    <ClInclude Include="JsonMethods.h" />
+    <ClInclude Include="ExecuteProcess.h" />
+    <ClInclude Include="MainConfig.h" />
+    <ClInclude Include="CodingParse.h" />
+    <ClInclude Include="JsonParse.h" />
     <ClInclude Include="main.h" />
-    <ClInclude Include="ReadFileMethods.h" />
-    <ClInclude Include="WriteFileMethods.h" />
+    <ClInclude Include="ReadFile.h" />
+    <ClInclude Include="WriteFile.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">

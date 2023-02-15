@@ -10,23 +10,23 @@
 #pragma once
 #include "MainWidgets.h"
 #include "ui_MainWidgets.h"
-#include "SelectDialog.h"
-#include "GetFileInfoMethods.h"
-#include "JsonMethods.h"
 #include <qsignalmapper.h>
 #include <nlohmann/json.hpp>
-#include "ConfigParam.h"
-#include "WriteFileMethods.h"
-#include "ReadFileMethods.h"
+#include "MainConfig.h"
+#include "MainConfig.h"
+#include "SelectDialog.h"
+#include "GetFileInfo.h"
+#include "JsonParse.h"
+#include "ReadFile.h"
+#include "WriteFile.h"
+using json = nlohmann::json;
+
 /**
  * \brief 主窗口
  */
-extern nlohmann::json globalConfig;
-
 class MainWidgets : public QMainWindow
 {
     Q_OBJECT
-
 public slots:
     void onToolButton(QString target) const;
 
@@ -34,14 +34,12 @@ public:
     explicit MainWidgets(QWidget* parent = nullptr);
     ~MainWidgets() override;
     void initFirstToolButton() const;
-    void initGlobalConfig() const;
 private:
     Ui::MainWidgetsClass ui{};
     QSignalMapper* signalMapper;
-    GetFileInfoMethods getFileInfoMethods;
-    JsonMethods jsonMethods;
-    ConfigParam configParam;
-    WriteFileMethods writeFileMethods;
-    EncodingMethods encodingForm;
-    ReadFileMethods readFileMethods;
+    ReadFile* readFile = new ReadFile();
+    GetFileInfo* getFileInfo = new GetFileInfo();
+    JsonParse* jsonParse = new JsonParse();
+    WriteFile* writeFile = new WriteFile();
+    MainConfig* mainConfig = new MainConfig(ui, getFileInfo, readFile, writeFile, jsonParse);
 };

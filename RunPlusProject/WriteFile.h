@@ -15,32 +15,31 @@
 /**
  * \brief 文件写入类
  */
-class WriteFileMethods
+class WriteFile
 {
-    QByteArray codec;
+    QByteArray codec = "UTF-8";
+    QString errorText = "";
 public:
+    WriteFile() = default;
 
-    WriteFileMethods() = default;
+    explicit WriteFile(QByteArray codec);
 
-    WriteFileMethods(QByteArray codec);
-    /**
-     * \brief 默认使用UTF-8编码写入文件
-     * \param fileName 文件路径
-     * \param fileText 文件内容
-     */
-    bool writeFile(const char* fileName, const char* fileText) const;
+    QByteArray getCodec() const
+    {
+        return codec;
+    }
 
-    /**
-     * \brief 默认使用UTF-8编码写入文件
-     * \param fileName 文件路径
-     * \param fileText 文件内容
-     */
-    bool writeFile(const QByteArray& fileName, const QByteArray& fileText) const;
+    void setCodec(const QByteArray& codec)
+    {
+        this->codec = codec;
+    }
 
     /**
      * \brief 默认使用UTF-8编码写入文件
-     * \param fileName 文件路径
+     * \param filePath 文件路径
      * \param fileText 文件内容
      */
-    bool writeFile(const QString& fileName, const QString& fileText) const;
+    WriteFile& writeFile(const QByteArray& filePath, const QByteArray& fileText);
+
+    WriteFile& writeFile(const QString& filePath, const QString& fileText);
 };

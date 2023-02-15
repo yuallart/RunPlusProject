@@ -13,5 +13,6 @@
 void main()
 {
     const mainTest test;
+    test.getFileInfoFunTest();
     char a = getchar();
 }

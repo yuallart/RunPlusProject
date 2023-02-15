@@ -8,19 +8,19 @@
  * └──────────────────────────────────┘
  */
 
-#include "GetFileInfoMethods.h"
+#include "GetFileInfo.h"
 
-QFileInfoList* GetFileInfoMethods::getFileInfoList() const
+QFileInfoList* GetFileInfo::getFileInfoList() const
 {
     return fileInfoList;
 }
 
-nlohmann::json* GetFileInfoMethods::getFileInfoJson() const
+nlohmann::json* GetFileInfo::getFileInfoJson() const
 {
     return fileInfoJson;
 }
 
-GetFileInfoMethods& GetFileInfoMethods::getFileInfo(const char* filePath)
+GetFileInfo& GetFileInfo::getFileInfo(const char* filePath)
 {
     QDir dir(QString::fromLocal8Bit(filePath));
     if (!dir.exists())
@@ -35,7 +35,7 @@ GetFileInfoMethods& GetFileInfoMethods::getFileInfo(const char* filePath)
     return *this;
 }
 
-GetFileInfoMethods& GetFileInfoMethods::toInfoJson()
+GetFileInfo& GetFileInfo::toInfoJson()
 {
     if (fileInfoList->empty())
     {
@@ -53,20 +53,18 @@ GetFileInfoMethods& GetFileInfoMethods::toInfoJson()
     return *this;
 }
 
-bool GetFileInfoMethods::isFileExist(const QString& filePath) const
+GetFileInfo& GetFileInfo::toInfoMap()
 {
-    const QFileInfo fileInfo(filePath);
-    return fileInfo.isFile();
-}
-
-bool GetFileInfoMethods::isDirExist(const QString& filePath) const
-{
-    const QFileInfo fileInfo(filePath);
-    return fileInfo.isDir();
-}
-
-bool GetFileInfoMethods::isAnyExist(const QString& filePath) const
-{
-    const QFileInfo fileInfo;
-    return fileInfo.exists();
+    if (fileInfoList->empty())
+    {
+        qDebug() << "Read failure";
+        return *this;
+    }
+    QMap<QString, QString> fileMap;
+    for (QFileInfoList::iterator iterator = fileInfoList->begin(); iterator != fileInfoList->end(); ++iterator)
+    {
+        fileMap.insert(iterator.i->t().fileName(), iterator.i->t().filePath());
+    }
+    *fileInfoMap = fileMap;
+    return *this;
 }

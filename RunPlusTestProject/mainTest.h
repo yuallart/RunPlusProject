@@ -9,21 +9,21 @@
  */
 #pragma once
 #include <qtestcase.h>
-#include "JsonMethodsTest.h"
-#include "PutFileMethodsTest.h"
+#include "ReadFileTest.h"
+#include "GetFileInfoTest.h"
 
 class mainTest
 {
 public:
-    void jsonMethods() const
+    void readFileObjectTest() const
     {
-        JsonMethodsTest jsonMethodsTest;
-        QTest::qExec(&jsonMethodsTest);
+        ReadFileTest readFileTest;
+        QTest::qExec(&readFileTest);
     }
 
-    void putFileMethods() const
+    void getFileInfoFunTest() const
     {
-        PutFileMethodsTest putFileMethodsTest;
-        QTest::qExec(&putFileMethodsTest);
+        GetFileInfoTest getFileInfo;
+        QTest::qExec(&getFileInfo);
     }
 };

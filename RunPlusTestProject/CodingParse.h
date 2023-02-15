@@ -13,7 +13,7 @@
 #include <QObject>
 #include <qobjectdefs.h>
 
-class EncodingMethods : public QObject
+class CodingParse : public QObject
 {
     Q_OBJECT
 private slots:

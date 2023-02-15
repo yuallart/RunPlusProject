@@ -1,0 +1,10 @@
+{
+  "exportFolderPath": ":desktop",
+  "isSeparate": true,
+  "separateDetails": {
+    "aliasFolder": "别名文件",
+    "script": "脚本文件",
+    "shortcut": "快捷方式"
+  },
+  "subjectFolderPath": "C:/Users/Public/RunPlusFolder"
+}
