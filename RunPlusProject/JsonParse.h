@@ -1,4 +1,4 @@
-﻿/**
+/**
  *  Copyright(c) 2022 Corporation.All rights reserved.
  * ┌──────────────────────────────────┐
  * │　\author: Yuallart
@@ -64,9 +64,9 @@ public:
         return *this;
     }
 
-    JsonParse& outputJsonData(const QByteArray& jsonStr)
+    JsonParse& outputJsonData(const std::string& jsonStr)
     {
-        jsonData = json::parse(jsonStr.toStdString());
+        jsonData = json::parse(jsonStr);
         jsonText = jsonData.dump(indent);
         return *this;
     }

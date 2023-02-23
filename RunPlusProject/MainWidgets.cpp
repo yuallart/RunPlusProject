@@ -20,13 +20,11 @@ MainWidgets::~MainWidgets() = default;
  * \brief 点击事件
  * \param target 接收的参数
  */
-void MainWidgets::onToolButton(QString target) const
+void MainWidgets::onToolButton(const QString& target) const
 {
     qDebug() << target;
-    const auto* select_dialog = new SelectDialog();
-    QString const dir = select_dialog->selectFolder("选择", R"(C:\ProgramData\RunPlus)");
+    QString const dir = selectDialog->selectFolder("选择", R"(C:\ProgramData\RunPlus)");
     ui.lineEdit_1->setText(dir);
-    delete select_dialog;
 }
 
 void MainWidgets::initFirstToolButton() const

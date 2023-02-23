@@ -10,9 +10,9 @@ class ReadFile
 {
 private:
     QString errorText = "";
-    QByteArray fileCodec = "UTF-8";
+    QByteArray* fileCodec = new QByteArray("UTF-8");
 public:
-    explicit ReadFile(QByteArray fileCodec) : fileCodec(std::move(fileCodec))
+    explicit ReadFile(QByteArray* fileCodec) : fileCodec(fileCodec)
     {
     }
 

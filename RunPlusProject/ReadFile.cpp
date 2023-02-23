@@ -1,4 +1,4 @@
-/**
+﻿/**
  *  Copyright(c) 2022 Corporation.All rights reserved.
  * ┌──────────────────────────────────┐
  * │　\author: Yuallart
@@ -8,9 +8,11 @@
  * └──────────────────────────────────┘
  */
 
+#include <qstring.h>
 #include "ReadFile.h"
+#include "GetFileInfo.h"
 
- /**
+/**
   * \brief 文件内容读取方法
   * \param filePath 文件路径
   * \return 返回读取到的文件内容
@@ -28,7 +30,7 @@ QString ReadFile::readFileData(const QByteArray& filePath)
     if (file.open(QIODevice::ReadOnly))
     {
         QTextStream textStream(&file);
-        textStream.setCodec(fileCodec);
+        textStream.setCodec(*fileCodec);
         return textStream.readAll();
     }
     return nullptr;
@@ -47,7 +49,7 @@ QString ReadFile::readFileData(const QString& filePath)
     if (file.open(QIODevice::ReadOnly))
     {
         QTextStream textStream(&file);
-        textStream.setCodec(fileCodec);
+        textStream.setCodec(*fileCodec);
         return textStream.readAll();
     }
     return nullptr;
